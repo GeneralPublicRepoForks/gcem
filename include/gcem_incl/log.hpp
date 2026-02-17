@@ -42,7 +42,7 @@ noexcept
     int depth = GCEM_LOG_MAX_ITER_SMALL - 1;
     T res = T(2*(depth+1) - 1);
 
-    while (depth > depth_end - 1) {
+    while (depth >= depth_end) {
         res = T(2*depth - 1) - T(depth*depth) * xx / res;
 
         --depth;
